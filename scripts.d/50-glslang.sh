@@ -11,6 +11,7 @@ ffbuild_enabled() {
 }
 
 ffbuild_dockerbuild() {
+    [[ $ADDINS_STR == *4.3* ]] && GLSLANG_COMMIT="bcf6a2430e99e8fc24f9f266e99316905e6d5134"
     git-mini-clone "$GLSLANG_REPO" "$GLSLANG_COMMIT" glslang
     cd glslang
 
